@@ -38,7 +38,7 @@ func sendEmail(user model.User) {
 	mail.SetBody("text/html", result)
 
 	sender := gm.NewDialer("smtp.gmail.com", 25, "Kx5bPjry3gREqQiKkVJrM27f@gmail.com", "tvzyqdonjztrwsod")
-
+	
 	if err := sender.DialAndSend(mail); err != nil {
 		fmt.Println(err)
 	} else {
